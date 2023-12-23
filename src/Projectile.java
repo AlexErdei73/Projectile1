@@ -14,7 +14,7 @@ public class Projectile {
       t = 0;
       ay = -9.8;
       t = 0;
-      dt = 0.1;
+      dt = 0.001;
       while (y > 0) {
           t += dt;
           y += vy * dt;
