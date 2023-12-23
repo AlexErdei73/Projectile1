@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Projectile {
     private double y;
     public double vy;
@@ -30,7 +32,10 @@ public class Projectile {
           }
           vy += ay * dt;
           if (t > this.t + delta_t) {
+              plot.setColor(Color.red);
               plot.addPoint(t, y);
+              plot.setColor(Color.blue);
+              plot.addPoint(t, -vy);
               this.t = t;
           }
       }
